@@ -24,11 +24,113 @@
             /* 요소 간 갭은 나중에 일괄적으로 조정 
             각자 맡은 파트를 center-container 안의 박스(div) 단위로 구현*/
         }
+        #faq{
+            background-color: #f3f5fa;
+            padding: 60px 0;
+            overflow: hidden;
+            width: 100%;
+        }
+        .faq-title{
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .faq-title h2{
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            color: #37517e;
+            font-family: "Jost", sans-serif;
+            margin-top: 0;
+        }
+
+        .faq-title h2::before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 1px;
+            background: #ddd;
+            bottom: 1px;
+            left: calc(50% - 60px);
+        }
+        .faq-title h2::after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: #47b2e4;
+            bottom: 0;
+            left: calc(50% - 20px);
+        }
+        .faq-title p{
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            margin-top: 0;
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            color: #444444; 
+        }
     </style>
 </head>
 <body id="center-outline">
-    <div id="center-container">
-        <!-- 각 div별로 세로로 정렬할 예정 -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>
+                    Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+                </p>
+            </div>
+            <div class="faq-list">
+                <ul>
+                    <li class="li">
+                        <i></i><a href=""></a>
+                        <div>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <i></i><a href=""></a>
+                        <div>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <i></i><a href=""></a>
+                        <div>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <i></i><a href=""></a>
+                        <div>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <i></i><a href=""></a>
+                        <div>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <i></i><a href=""></a>
+                        <div>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>
