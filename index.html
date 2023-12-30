@@ -7,22 +7,17 @@
     <link rel="stylesheet" href="./styles/global.css"/>
     <title>Arsha</title>
     <style>
-        /* 공통으로 적용되는 스타일 일단 임시로 여기에 두고 나중에 global로 옮김 */
-        /* 일단 body에 적용해놓기 했는데, 필요에 따라 div로 바꾸고 바디로 다시 wrap할 예정 */
+        :root {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+        }
+        body {
+            font-family: "Open Sans", sans-serif;
+            color: #444444;
+        }
         #center-outline {
             display: flex;
-        }
-        /* 충분히 넓은 화면 기준 / 1200에서 구성이 약간 바뀜 / 900에서 완전히 바뀌니 주의 */
-        #center-container {
-            display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 1296px;
-            margin: 0 auto;
-            /* gap: 10px;
-            /* 요소 간 갭은 나중에 일괄적으로 조정 
-            각자 맡은 파트를 center-container 안의 박스(div) 단위로 구현*/
         }
         #faq{
             background-color: #f3f5fa;
@@ -132,5 +127,27 @@
 
         </div>
     </div>
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        .container {
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+        }
+        /* 1 큰 박스 = section */
+        /* 1 내부 박스(큰 박스의 자식) = container */
+        /* section은 시맨틱 태그, 컨테이너는 클래스 부여 */
+    </style>
+</head>
+
+<body id="center-outline">dddd
+    <!-- 아래는 예시 -->
+    <section>
+        <div class="container"></div>
+    </section>
 </body>
 </html>
