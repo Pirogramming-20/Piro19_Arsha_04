@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css"/>
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <title>Arsha</title>
+    <style>
+        /* 공통으로 적용되는 스타일 일단 임시로 여기에 두고 나중에 global로 옮김 */
+        /* 일단 body에 적용해놓기 했는데, 필요에 따라 div로 바꾸고 바디로 다시 wrap할 예정 */
+        #center-outline {
+            display: flex;
+        }
+        /* 충분히 넓은 화면 기준 / 1200에서 구성이 약간 바뀜 / 900에서 완전히 바뀌니 주의 */
+        #center-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 1296px;
+            margin: 0 auto;
+            /* gap: 10px;
+            /* 요소 간 갭은 나중에 일괄적으로 조정 
+            각자 맡은 파트를 center-container 안의 박스(div) 단위로 구현*/
+        }
+    </style>
+</head>
+<body id="center-outline">
+    <div id="center-container">
+        <!-- 각 div별로 세로로 정렬할 예정 -->
+    </div>
+</body>
+</html>
