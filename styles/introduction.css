@@ -3,7 +3,7 @@
     align-items: center;
     background-color: #37517E;
     width: 100%;
-    height: 873px;
+    height: 80.5vh;
     padding-top: 104.48px;
     padding-bottom: 60px;
 }
@@ -32,13 +32,17 @@
 
 #introduction-main {
     font-size: 4.8rem;
+    font-weight: 700;
     color: white;
     margin: 0 0 10px;
+    line-height: 56px;
 }
 #introduction-sub {
     font-size: 2.4rem;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.6);
     margin: 0 0 50px;
+    line-height: 1.2;
 }
 #introduction-buttonbox {
     display: flex;
@@ -56,6 +60,21 @@
     background: #47b2e4;
 }
 
+#introduction-buttonbox > a {
+    display: flex;
+}
+
+#introduction-buttonbox > a:hover svg{  
+    fill: #47b2e4;
+}
+
+#introduction-buttonbox > a > svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    transition: fill 0.2s ease-in-out;
+}
+
 #introduction-buttonbox > button:hover {
     background-color: #209DD8;
 }
@@ -71,6 +90,7 @@
     cursor: pointer;
 }
 #intro-image {
+    pointer-events: none;
     animation: intro-image 4s ease-in-out infinite;
 }
 

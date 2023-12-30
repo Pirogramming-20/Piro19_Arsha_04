@@ -1,11 +1,17 @@
 header {
-    display: sticky;
-    flex-direction: column;
     width: 100%;
     position: fixed;
+    z-index: 1;
+}
+
+#header-logo {
+    height: 24px;
+    width: 178px;
 }
 
 #header-top {
+    position: absolute;
+    top: 0;
     display: flex;
     align-items: center;
     width: 100%;
@@ -24,6 +30,7 @@ header {
     background-color: transparent;
     padding: 15px 0;
     margin-top: 32px;
+    z-index: 1;
 }
 
 #header-top-center, #header-top-left {
@@ -45,23 +52,28 @@ header {
 
 #header-menu-logo {
     font-size: 3rem;
-    font-weight: bold;
     margin-right: auto;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
 #header-menubox {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
+    font-weight: 400;
 }
 
 #header-menubox > a {
+    z-index: 1;
     padding: 10px 0 10px 30px;
     transition: color 0.2s ease-in-out;
+    
 }
 
 #header-menubox > button {
     color: white;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     border: 2px solid rgb(71, 178, 228);
     padding: 8px 20px;
