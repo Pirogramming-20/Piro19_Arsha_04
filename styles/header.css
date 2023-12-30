@@ -1,0 +1,80 @@
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+}
+
+#header-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 32px;
+    background-color: #023B6D;
+    font-size: 1.6rem;
+    color: white;
+}
+
+#header-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 72.48px;
+    background-color: #37517E;
+    padding: 15px 0;
+}
+
+#header-top-center, #header-top-left {
+    margin-left: auto;
+}
+
+#header-top-left {
+    display: flex;
+    gap: 10px;
+}
+
+#header-menu-innerbox {
+    display: flex;
+    align-items: center;
+    width: 1296px;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+}
+
+#header-menu-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+#header-menubox {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#header-menubox > a {
+    padding: 10px 0 10px 30px;
+    transition: color 0.2s ease-in-out;
+}
+
+#header-menubox > button {
+    color: white;
+    font-weight: 600;
+    border: 2px solid rgb(71, 178, 228);
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#header-menubox > a:hover {
+    color: rgb(71, 178, 228);
+}
+
+
+#header-menubox > button:hover {
+    background-color: rgb(71, 178, 228);
+}
