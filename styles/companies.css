@@ -1,0 +1,39 @@
+#companies-background {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 102.27px;
+    padding: 12px 0;
+    background-color: #f3f5fa;
+}
+
+#companies {
+    padding: 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+#companies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+#companies-grid > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    background-color: transparent;
+}
+
+#companies-grid > div > img {
+    width: 40%;
+    filter: grayscale(100%);
+    transition: all 0.4s ease-in-out;
+}
+
+#companies-grid > div > img:hover {
+    width: 45%;
+    filter: grayscale(0%);
+}

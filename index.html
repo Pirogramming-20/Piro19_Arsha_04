@@ -5,41 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css"/>
     <link rel="stylesheet" href="./styles/global.css"/>
+    <link rel="stylesheet" href="./styles/header.css"/>
+    <link rel="stylesheet" href="./styles/introduction.css"/>
+    <link rel="stylesheet" href="./styles/companies.css"/>
+    <link rel="stylesheet" href="./styles/aboutus.css"/>
     <title>Arsha</title>
     <style>
-        :root {
-            --bs-gutter-x: 1.5rem;
-            --bs-gutter-y: 0;
-        }
-        body {
-            font-family: "Open Sans", sans-serif;
-            color: #444444;
-        }
-        #center-outline {
-            display: flex;
-            flex-direction: column;
-        }
-        section {
-            padding: 60px 0;
-            overflow: hidden;
-        }
-        .container {
-            width: 100%;
-            padding-right: calc(var(--bs-gutter-x) * .5);
-            padding-left: calc(var(--bs-gutter-x) * .5);
-            margin-right: auto;
-            margin-left: auto;
-        }
         /* 1 큰 박스 = section */
         /* 1 내부 박스(큰 박스의 자식) = container */
         /* section은 시맨틱 태그, 컨테이너는 클래스 부여 */
     </style>
 </head>
-
-<body id="center-outline">dddd
-    <!-- 아래는 예시 -->
-    <section>
-        <div class="container"></div>
+<body id="center-outline">
+    <header>
+        <div id="header-top">
+            <!-- 각자 margin처리 -->
+            <div><img id="header-logo" src="./images/logo.png" alt=""></div>
+            <div id="current-device">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M4 16h16V5H4v11zm9 2v2h4v2H7v-2h4v-2H2.992A.998.998 0 0 1 2 16.993V4.007C2 3.451 2.455 3 2.992 3h18.016c.548 0 .992.449.992 1.007v12.986c0 .556-.455 1.007-.992 1.007H13z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M6 4v16h12V4H6zM5 2h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm7 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M7 4v16h10V4H7zM6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+            </div>
+            <div id="header-top-center" class="default_font">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/></svg>
+                <span>Arsha</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+            </div>
+            <div id="header-top-left">
+                <div id="external-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/></svg></div>
+                <div id="header-download" class="default_font"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M13 10h5l-6 6-6-6h5V3h2v7zm-9 9h16v-7h2v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8h2v7z"/></svg>FREE DOWNLOAD</div>
+            </div>
+        </div>
+    </header>
+    <div id="header-menu">
+        <div id="header-menu-innerbox">
+            <a href="" id="header-menu-logo" class="jost_font">ARSHA</a>
+            <div id="header-menubox">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Services</a>
+                <a href="">Portfolio</a>
+                <a href="">Team</a>
+                <div id = "header-menubox-dropdown">
+                    <a href="">Drop Down 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"/></svg>
+                    </a>
+                    <div id="header-dropdown-menu">
+                        <span>Espresso</span>
+                        <div id="header-inner-dropdown-menu">
+                            <span>Latte</span>
+                            <div id="header-dropdown-latte">
+                                <span>Caffe Latte</span>
+                                <span>Latte Macchiato</span>
+                                <span>GreenTea Latte</span>
+                                <span>Mocha Latte</span>
+                                <span>Vanilla Latte</span>
+                            </div>
+                        </div>
+                        <span>Americano</span>
+                        <span>Dolce</span>
+                        <span>Cappuccino</span>
+                    </div>
+                </div>
+                <a href="">Contact</a>
+                <button>Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="introduction-box" >
+            <div id="introduction-innerbox" class="container">
+                <div>
+                    <div id="introduction-main" class="jost_font">Better Solutions For Your Business</div>
+                    <div id="introduction-sub" class="jost_font">We are team of talented designers making websites with Bootstrap</div>
+                    <div id="introduction-buttonbox">
+                        <button class="jost_font">Get Started</button>
+                        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/>
+                          </svg>Watch Video</a>
+                    </div>
+                </div>
+                <div><img id="intro-image" src="./images/hero-img.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <section id="companies-background">
+        <div id="companies" class="container">
+            <div id="companies-grid">
+                <div><img src="./images/client-1.png" alt=""></div>
+                <div><img src="./images/client-2.png" alt=""></div>
+                <div><img src="./images/client-3.png" alt=""></div>
+                <div><img src="./images/client-4.png" alt=""></div>
+                <div><img src="./images/client-5.png" alt=""></div>
+                <div><img src="./images/client-6.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us">
+        <div id="about-us-box" class="container">
+            <div class="jost_font">ABOUT US
+                <div></div>
+                <div></div>
+            </div>
+            <div id="about-us-contentbox">
+                <div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    <div id="about-us-listbox">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path  d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>Ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path  d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>Duis aute irure dolor in reprehenderit in voluptate velit</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path  d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>Ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
+                    </div>
+                </div>
+                <div>
+                    <div>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <button id="about-us-button" class="poppins_font">Learn More</button>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
