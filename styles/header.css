@@ -1,0 +1,256 @@
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+#header-top {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 32px;
+    background-color: #023B6D;
+    font-size: 1.6rem;
+    color: white;
+}
+
+#current-device {
+    display: flex;
+    justify-content: space-between;
+    width: 86px;
+    margin-left: 25px;
+    margin-bottom: 1px;
+}
+
+#current-device > svg:nth-of-type(1) {
+    fill: white;
+}
+#current-device > svg:nth-of-type(2), #current-device > svg:nth-of-type(3) {
+    fill: rgba(255,255,255,0.5);
+    transition: fill 0.2s ease-in-out;
+}
+#current-device > svg:hover {
+    fill: white;
+}
+
+#header-logo {
+    height: 24px;
+    width: 178px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+#header-top-center {
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    margin-right: -19px;
+}
+
+#header-top-center > * {
+    fill: rgba(255,255,255,0.6);
+    margin: 0 5px;
+    transition: fill 0.2s ease-in-out;
+}
+#header-top-center > span {
+    margin-bottom: 4px;
+}
+#header-top-center > *:hover {
+    cursor: pointer;
+    fill: white;
+}
+
+#external-link {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+#external-link > svg {
+    fill: rgba(255,255,255,0.6);
+    transition: fill 0.2s ease-in-out;
+}
+
+#external-link > svg:hover {
+    fill: rgba(255,255,255);
+}
+
+#header-download {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 32px;
+    background-color: #00A6EB;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#header-download:hover {
+    background-color: #00B4FF;
+}
+
+#header-download > svg {
+    fill: white;
+    margin-right: 7px;
+    margin-left: 15px;
+}
+
+#header-menu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 72.48px;
+    background-color: rgba(40, 58, 90, 0.9);
+    padding: 15px 0;
+    margin-top: 32px;
+    z-index: 1;
+    animation: color-change 1s ease-in-out;
+    animation-timeline: view(-80px auto);
+}
+
+@keyframes color-change {
+    100% {background-color: transparent}
+}
+
+#header-top-center, #header-top-left {
+    margin-left: auto;
+}
+
+#header-top-left {
+    display: flex;
+    gap: 10px;
+}
+
+#header-menu-innerbox {
+    display: flex;
+    align-items: center;
+    width: 1296px;
+    height: 100%;
+    color: white;
+}
+
+#header-menu-logo {
+    font-size: 3rem;
+    margin-right: auto;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#header-menubox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#header-menubox-dropdown > a{
+    display: flex;
+    align-items: center;
+}
+
+#header-dropdown-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    color: black;
+    width: 200px;
+    height: 224px;
+    background-color: white;
+    bottom: -260px;
+    left: 404px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 4px;
+    transition: opacity 0.25s, bottom 0.25s ease-in-out;
+}
+
+#header-dropdown-menu > * , #header-dropdown-latte > * {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 100%;
+    padding-left: 25px;
+    color: #0c3c53;
+}
+#header-dropdown-latte > * {
+    padding-right: 0;
+}
+#header-dropdown-menu > *:hover , #header-dropdown-latte > *:hover {
+    cursor: pointer;
+    color: #47b2e4;
+}
+
+#header-menubox-dropdown:hover > #header-dropdown-menu{
+    opacity: 1;
+    bottom: -224px;
+    pointer-events: all;
+}
+
+#header-menubox-dropdown > a > svg {
+    fill: white;
+    transition: fill 0.2s ease-in-out;
+}
+
+#header-menubox > * {
+    z-index: 1;
+    padding: 10px 0 10px 29px;
+    transition: color 0.2s ease-in-out;
+}
+
+#header-menubox > button {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    border: 2px solid rgb(71, 178, 228);
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#header-menubox > a:hover, #header-menubox > div:hover{
+    color: rgb(71, 178, 228);
+}
+#header-menubox-dropdown:hover a svg{
+    fill: rgb(71, 178, 228);
+}
+
+#header-menubox > button:hover {
+    background-color: rgb(71, 178, 228);
+}
+
+#header-dropdown-latte {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    color: black;
+    width: 200px;
+    height: 224px;
+    background-color: white;
+    bottom: -50px;
+    left: 170px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 4px;
+    transition: opacity 0.25s, left 0.25s ease-in-out;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    z-index: 2;
+}
+
+#header-inner-dropdown-menu:hover > #header-dropdown-latte{
+    opacity: 1;
+    left: 200px;
+    pointer-events: all;
+}
