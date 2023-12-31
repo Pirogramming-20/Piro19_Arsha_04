@@ -1,45 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/reset.css"/>
-    <link rel="stylesheet" href="./styles/global.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
     <title>Arsha</title>
     <style>
-        :root {
-            --bs-gutter-x: 1.5rem;
-            --bs-gutter-y: 0;
-        }
-        body {
-            font-family: "Open Sans", sans-serif;
-            color: #444444;
-        }
-        #center-outline {
-            display: flex;
-            flex-direction: column;
-        }
-        section {
-            padding: 60px 0;
-            overflow: hidden;
-        }
-        .container {
-            width: 100%;
-            padding-right: calc(var(--bs-gutter-x) * .5);
-            padding-left: calc(var(--bs-gutter-x) * .5);
-            margin-right: auto;
-            margin-left: auto;
-        }
-        /* 1 큰 박스 = section */
-        /* 1 내부 박스(큰 박스의 자식) = container */
-        /* section은 시맨틱 태그, 컨테이너는 클래스 부여 */
-    </style>
-</head>
+      :root {
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 0;
+      }
 
-<body id="center-outline">dddd
-    <!-- 아래는 예시 -->
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #444444;
+      }
+
+      #center-outline {
+        display: flex;
+        flex-direction: column;
+      }
+
+      section {
+        padding: 60px 0;
+        overflow: hidden;
+      }
+
+      .container {
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .section-list {
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .section-title {
+        font-size: 3.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        position: relative;
+        color: #37517e;
+      }
+
+      .seciont-bottom-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 24px;
+      }
+
+      .section-bottom {
+        width: 120px;
+        height: 1px;
+        background: #ddd;
+        border: 1px solid #ddd;
+        position: relative;
+      }
+
+      .section-bottoms {
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background: #47b2e4;
+        border: 1px solid #47b2e4;
+      }
+
+      .section-list p {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+      }
+
+      .section-list li {
+        cursor: pointer;
+        display: inline-block;
+        margin: 10px 5px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1;
+        color: #444444;
+        transition: all 0.3s;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .section-list li:hover,
+      .section-list li.active {
+        background: #47b2e4;
+        color: #fff;
+      }
+
+      .section-button {
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+
+      .section-img {
+        display: flex;
+        flex-direction: column;
+        margin-right: 25px;
+
+        overflow: hidden;
+      }
+
+      /* .section-img img {
+        margin-bottom: 30px;
+        transition: all 0.8s linear;
+
+        width: 416px;
+
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      .section-img img:hover {
+        transform: scale(1.2);
+        width: 416px;
+      } */
+
+      .section-img img {
+        margin-bottom: 30px;
+        transition: transform 0.4s linear;
+        width: 416px;
+        height: auto;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      .section-img img:hover {
+        transform: scale(1.1);
+      }
+
+      .section-imgs {
+        display: flex;
+        justify-content: center;
+      }
+
+      .section-2 {
+        background-color: #f3f5fa;
+      }
+
+      .team_card {
+        display: flex;
+        align-items: center;
+        width: 636px;
+        height: 233.83px;
+
+        background-color: #ffffff;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+
+        margin-bottom: 25px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .member {
+        width: 173.83px;
+
+        border-radius: 100px;
+
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+      .name {
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 2rem;
+        color: #37517e;
+      }
+
+      .job {
+        display: block;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+        position: relative;
+        font-weight: 500;
+      }
+
+      .info {
+        font-size: 1.4rem;
+
+        margin-top: 15px;
+      }
+
+      .sns {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .bottom {
+        width: 50px;
+
+        border: 0.5px solid #cbd6e9;
+      }
+
+      .team-card1 {
+        display: flex;
+        justify-content: center;
+
+        gap: 30px;
+      }
+
+      .sns li {
+        cursor: pointer;
+        display: inline-block;
+        /* margin: 10px 5px; */
+        color: #444444;
+        transition: all 0.3s;
+        padding: 8px 8px 8px 8px;
+
+        border-radius: 80px;
+        font-family: "Poppins", sans-serif;
+
+        background-color: #eff2f8;
+
+        margin-right: 6px;
+      }
+
+      .sns img {
+        display: flex;
+        justify-content: center;
+        width: 15px;
+      }
+
+      .sns li:hover,
+      .sns li.active {
+        background: #47b2e4;
+        color: #fff;
+      }
+
+      .team_card:hover {
+        transform: translateY(-10px);
+        transition: transform 0.7s ease-in-out;
+      }
+
+      .team_card:not(:hover) {
+        transform: translateY(0);
+      }
+
+      .price-card {
+        box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
+        width: 416px;
+        height: 573.19px;
+
+        margin-right: 25px;
+
+        border-radius: 5px;
+      }
+
+      .price-list {
+        padding-top: 60px;
+        padding-left: 40px;
+      }
+
+      .price {
+        display: flex;
+        font-size: 4.8rem;
+        color: #37517e;
+        font-weight: 400;
+        font-family: "Jost", sans-serif;
+
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .price1 {
+        font-size: 2.5rem;
+      }
+
+      .per {
+        color: #47b2e4;
+        font-size: 1.8rem;
+      }
+
+      .content-box {
+        margin-top: 50px;
+      }
+
+      .content {
+        display: flex;
+
+        font-size: 1.8rem;
+        color: #999999;
+      }
+
+      .content img {
+        width: 14px;
+        height: 14px;
+
+        margin-right: 12px;
+        margin-bottom: 20px;
+      }
+
+      .price-button {
+        display: inline-block;
+        padding: 12px 35px;
+        border-radius: 50px;
+        color: #47b2e4;
+        transition: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: "Jost", sans-serif;
+        transition: 0.3s;
+        border: 1px solid #47b2e4;
+
+        margin-top: 40px;
+      }
+
+      .get-button:hover {
+        background: #22a3df;
+        transition: 0.3s;
+        color: #fff;
+      }
+
+      .get-button {
+        background-color: #47b2e4;
+        color: #fff;
+        display: inline-block;
+        padding: 13px 36px;
+        border-radius: 50px;
+        transition: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: "Jost", sans-serif;
+        margin-top: 40px;
+      }
+
+      .price-button:hover,
+      .price-button.active {
+        background: #47b2e4;
+        color: #fff;
+      }
+
+      .content-title {
+        color: #cccccc;
+      }
+
+      .section-3 {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 20px;
+      }
+
+      .fixed-buttom-box {
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        bottom: 10px; /* Adjust the distance from the bottom as needed */
+        right: 20px;
+      }
+
+      .fixed-buttom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #47b2e4;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 100px;
+      }
+
+      .fixed-buttom img {
+        width: 12px;
+        height: 12px;
+      }
+
+      .sns li:hover img {
+        filter: brightness(0) invert(1);
+      }
+
+      .sns li img {
+        filter: invert(0);
+        transition: filter 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body id="center-outline">
     <section>
-        <div class="container"></div>
+      <div class="container">
+        <div class="section-list">
+          <div>
+            <h2 class="section-title">PORTFOLIO</h2>
+            <div class="seciont-bottom-container">
+              <div class="section-bottom"></div>
+              <div class="section-bottoms"></div>
+            </div>
+
+            <p>
+              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
+              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
+              quos quisquam cupiditate. Et nemo qui
+            </p>
+            <p>
+              impedit suscipit alias ea. Quia fugiat sit in iste officiis
+              commodi quidem hic quas.
+            </p>
+          </div>
+          <div class="section-button">
+            <ul>
+              <li class="active">All</li>
+              <li>App</li>
+              <li>Card</li>
+              <li>Web</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          <!-- <div class="section-imgs">
+            <div class="section-img">
+              <img src="./img/portfolio-1.jpg" />
+              <img src="/img/portfolio-6.jpg" />
+            </div>
+            <div class="section-img">
+              <img src="/img/portfolio-2.jpg" />
+              <img src="/img/portfolio-5.jpg" />
+              <img src="/img/portfolio-9.jpg" />
+            </div>
+            <div class="section-img">
+              <img src="./img//portfolio-3.jpg" />
+              <img src="/img//portfolio-4.jpg" />
+              <img src="/img/portfolio-7.jpg" />
+              <img src="/img/portfolio-8.jpg" />
+            </div>
+          </div> -->
+        </div>
+      </div>
     </section>
-</body>
+    <section class="section-2">
+      <div class="container">
+        <div>
+          <div class="section-list">
+            <h2 class="section-title">TEAM</h2>
+            <div class="seciont-bottom-container">
+              <div class="section-bottom"></div>
+              <div class="section-bottoms"></div>
+            </div>
+
+            <p>
+              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
+              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
+              quos quisquam cupiditate. Et nemo qui
+            </p>
+            <p>
+              impedit suscipit alias ea. Quia fugiat sit in iste officiis
+              commodi quidem hic quas.
+            </p>
+          </div>
+          <div>
+            <div class="team-card1">
+              <div class="team_card">
+                <div>
+                  <img src="img/team-1.jpg" class="member" />
+                </div>
+                <div>
+                  <div class="name">Walter White</div>
+                  <div class="job">Chief Executive Officer</div>
+                  <div class="bottom"></div>
+                  <div class="info">
+                    Explicabo voluptatem mollitia et repellat qui dolorum
+                    <br />quasi
+                  </div>
+
+                  <div class="sns">
+                    <ul>
+                      <li><img src="img/twitter.png" /></li>
+                      <li><img src="img/facebook.png" /></li>
+                      <li><img src="img/instagram.png" /></li>
+                      <li><img src="img/linkedin.png" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="team_card">
+                <div>
+                  <img src="img/team-2.jpg" class="member" />
+                </div>
+                <div>
+                  <div class="name">Sarah Jhonson</div>
+                  <div class="job">Product Manager</div>
+                  <div class="bottom"></div>
+                  <div class="info">
+                    Aut maiores voluptates amet et quis praesentium qui
+                    <br />senda para
+                  </div>
+                  <div class="sns">
+                    <ul>
+                      <li><img src="img/twitter.png" /></li>
+                      <li><img src="img/facebook.png" /></li>
+                      <li><img src="img/instagram.png" /></li>
+                      <li><img src="img/linkedin.png" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team-card1">
+              <div class="team_card">
+                <div>
+                  <img src="img/team-3.jpg" class="member" />
+                </div>
+                <div>
+                  <div class="name">Walter White</div>
+                  <div class="job">Chief Executive Officer</div>
+                  <div class="bottom"></div>
+                  <div class="info">
+                    Explicabo voluptatem mollitia et repellat qui dolorum
+                    <br />quasi
+                  </div>
+
+                  <div class="sns">
+                    <ul>
+                      <li><img src="img/twitter.png" /></li>
+                      <li><img src="img/facebook.png" /></li>
+                      <li><img src="img/instagram.png" /></li>
+                      <li><img src="img/linkedin.png" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="team_card">
+                <div>
+                  <img src="img/team-4.jpg" class="member" />
+                </div>
+                <div>
+                  <div class="name">Sarah Jhonson</div>
+                  <div class="job">Product Manager</div>
+                  <div class="bottom"></div>
+                  <div class="info">
+                    Aut maiores voluptates amet et quis praesentium qui
+                    <br />senda para
+                  </div>
+                  <div class="sns">
+                    <ul>
+                      <li><img src="img/twitter.png" /></li>
+                      <li><img src="img/facebook.png" /></li>
+                      <li><img src="img/instagram.png" /></li>
+                      <li><img src="img/linkedin.png" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-3">
+      <div class="container">
+        <div>
+          <div class="section-list">
+            <h2 class="section-title">PRICING</h2>
+            <div class="seciont-bottom-container">
+              <div class="section-bottom"></div>
+              <div class="section-bottoms"></div>
+            </div>
+
+            <p>
+              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
+              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
+              quos quisquam cupiditate. Et nemo qui
+            </p>
+            <p>
+              impedit suscipit alias ea. Quia fugiat sit in iste officiis
+              commodi quidem hic quas.
+            </p>
+          </div>
+          <div class="section-3">
+            <div class="price-card">
+              <div class="price-list">
+                <div class="name">Free Plan</div>
+                <div class="price">
+                  <div class="price1">$</div>
+                  <div class="price2">0</div>
+                </div>
+                <span class="per">per month</span>
+                <div class="content-box">
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Quam adipiscing vitae proin</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Nec feugiat nisl pretium</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Nulla at volutpat diam uteera</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/x.png" /></div>
+                    <div class="content-title">
+                      Pharetra massa massa ultricies
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/x.png" /></div>
+                    <div class="content-title">
+                      Massa ultricies mi quis hendrerit
+                    </div>
+                  </div>
+                </div>
+                <button class="price-button">Get Started</button>
+              </div>
+            </div>
+            <div class="price-card" style="border-top: 4px solid #47b2e4">
+              <div class="price-list">
+                <div class="name">Business Plan</div>
+                <div class="price">
+                  <div class="price1">$</div>
+                  <div class="price2">29</div>
+                </div>
+                <span class="per">per month</span>
+                <div class="content-box">
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Quam adipiscing vitae proin</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Nec feugiat nisl pretium</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Nulla at volutpat diam uteera</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Pharetra massa massa ultricies</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Massa ultricies mi quis hendrerit</div>
+                  </div>
+                </div>
+                <button class="get-button">Get Started</button>
+              </div>
+            </div>
+            <div class="price-card">
+              <div class="price-list">
+                <div class="name">Developer Plan</div>
+                <div class="price">
+                  <div class="price1">$</div>
+                  <div class="price2">49</div>
+                </div>
+                <span class="per">per month</span>
+                <div class="content-box">
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Quam adipiscing vitae proin</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Nec feugiat nisl pretium</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Nulla at volutpat diam uteera</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Pharetra massa massa ultricies</div>
+                  </div>
+                  <div class="content">
+                    <div><img src="img/checkmark.png" /></div>
+                    <div>Massa ultricies mi quis hendrerit</div>
+                  </div>
+                </div>
+                <button class="price-button">Get Started</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="fixed-buttom-box">
+      <button class="fixed-buttom"><img src="img/up-arrow.png" /></button>
+    </div>
+  </body>
 </html>
