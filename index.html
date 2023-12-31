@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css"/>
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <title>Arsha</title>
+    <style>
+        :root {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+        }
+        body {
+            font-family: "Open Sans", sans-serif;
+            color: #444444;
+        }
+        #center-outline {
+            display: flex;
+            flex-direction: column;
+        }
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        .container {
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+        }
+        /* 1 큰 박스 = section */
+        /* 1 내부 박스(큰 박스의 자식) = container */
+        /* section은 시맨틱 태그, 컨테이너는 클래스 부여 */
+    </style>
+</head>
+
+<body id="center-outline">dddd
+    <!-- 아래는 예시 -->
+    <section>
+        <div class="container"></div>
+    </section>
+</body>
+</html>
