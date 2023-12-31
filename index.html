@@ -5,389 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/Team&Pricing.css" />
     <title>Arsha</title>
     <style>
-      :root {
-        --bs-gutter-x: 24px;
-        --bs-gutter-y: 0;
-      }
-
-      body {
-        font-family: "Open Sans", sans-serif;
-        color: #444444;
-      }
-
-      #center-outline {
-        display: flex;
-        flex-direction: column;
-      }
-
-      section {
-        padding: 60px 0;
-        overflow: hidden;
-      }
-
-      .container {
-        width: 100%;
-        padding-right: calc(var(--bs-gutter-x) * 0.5);
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .section-list {
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .section-title {
-        font-size: 3.2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        position: relative;
-        color: #37517e;
-      }
-
-      .seciont-bottom-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        margin-bottom: 24px;
-      }
-
-      .section-bottom {
-        width: 120px;
-        height: 1px;
-        background: #ddd;
-        border: 1px solid #ddd;
-        position: relative;
-      }
-
-      .section-bottoms {
-        position: absolute;
-        width: 40px;
-        height: 3px;
-        background: #47b2e4;
-        border: 1px solid #47b2e4;
-      }
-
-      .section-list p {
-        font-size: 1.8rem;
-        margin-bottom: 5px;
-      }
-
-      .section-list li {
-        cursor: pointer;
-        display: inline-block;
-        margin: 10px 5px;
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 1;
-        color: #444444;
-        transition: all 0.3s;
-        padding: 8px 20px;
-        border-radius: 50px;
-        font-family: "Poppins", sans-serif;
-      }
-
-      .section-list li:hover,
-      .section-list li.active {
-        background: #47b2e4;
-        color: #fff;
-      }
-
-      .section-button {
-        margin-top: 30px;
-        margin-bottom: 15px;
-      }
-
-      .section-img {
-        display: flex;
-        flex-direction: column;
-        margin-right: 25px;
-
-        overflow: hidden;
-      }
-
-      /* .section-img img {
-        margin-bottom: 30px;
-        transition: all 0.8s linear;
-
-        width: 416px;
-
-        object-fit: cover;
-        overflow: hidden;
-      }
-
-      .section-img img:hover {
-        transform: scale(1.2);
-        width: 416px;
-      } */
-
-      .section-img img {
-        margin-bottom: 30px;
-        transition: transform 0.4s linear;
-        width: 416px;
-        height: auto;
-        object-fit: cover;
-        overflow: hidden;
-      }
-
-      .section-img img:hover {
-        transform: scale(1.1);
-      }
-
-      .section-imgs {
-        display: flex;
-        justify-content: center;
-      }
-
-      .section-2 {
-        background-color: #f3f5fa;
-      }
-
-      .team_card {
-        display: flex;
-        align-items: center;
-        width: 636px;
-        height: 233.83px;
-
-        background-color: #ffffff;
-        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-
-        margin-bottom: 25px;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .member {
-        width: 173.83px;
-
-        border-radius: 100px;
-
-        margin-left: 30px;
-        margin-right: 30px;
-      }
-
-      .name {
-        font-weight: 700;
-        margin-bottom: 15px;
-        font-size: 2rem;
-        color: #37517e;
-      }
-
-      .job {
-        display: block;
-        font-size: 1.5rem;
-        padding-bottom: 10px;
-        position: relative;
-        font-weight: 500;
-      }
-
-      .info {
-        font-size: 1.4rem;
-
-        margin-top: 15px;
-      }
-
-      .sns {
-        margin-top: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-      }
-
-      .bottom {
-        width: 50px;
-
-        border: 0.5px solid #cbd6e9;
-      }
-
-      .team-card1 {
-        display: flex;
-        justify-content: center;
-
-        gap: 30px;
-      }
-
-      .sns li {
-        cursor: pointer;
-        display: inline-block;
-        /* margin: 10px 5px; */
-        color: #444444;
-        transition: all 0.3s;
-        padding: 8px 8px 8px 8px;
-
-        border-radius: 80px;
-        font-family: "Poppins", sans-serif;
-
-        background-color: #eff2f8;
-
-        margin-right: 6px;
-      }
-
-      .sns img {
-        display: flex;
-        justify-content: center;
-        width: 15px;
-      }
-
-      .sns li:hover,
-      .sns li.active {
-        background: #47b2e4;
-        color: #fff;
-      }
-
-      .team_card:hover {
-        transform: translateY(-10px);
-        transition: transform 0.7s ease-in-out;
-      }
-
-      .team_card:not(:hover) {
-        transform: translateY(0);
-      }
-
-      .price-card {
-        box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
-        width: 416px;
-        height: 573.19px;
-
-        margin-right: 25px;
-
-        border-radius: 5px;
-      }
-
-      .price-list {
-        padding-top: 60px;
-        padding-left: 40px;
-      }
-
-      .price {
-        display: flex;
-        font-size: 4.8rem;
-        color: #37517e;
-        font-weight: 400;
-        font-family: "Jost", sans-serif;
-
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-
-      .price1 {
-        font-size: 2.5rem;
-      }
-
-      .per {
-        color: #47b2e4;
-        font-size: 1.8rem;
-      }
-
-      .content-box {
-        margin-top: 50px;
-      }
-
-      .content {
-        display: flex;
-
-        font-size: 1.8rem;
-        color: #999999;
-      }
-
-      .content img {
-        width: 14px;
-        height: 14px;
-
-        margin-right: 12px;
-        margin-bottom: 20px;
-      }
-
-      .price-button {
-        display: inline-block;
-        padding: 12px 35px;
-        border-radius: 50px;
-        color: #47b2e4;
-        transition: none;
-        font-size: 1.6rem;
-        font-weight: 500;
-        font-family: "Jost", sans-serif;
-        transition: 0.3s;
-        border: 1px solid #47b2e4;
-
-        margin-top: 40px;
-      }
-
-      .get-button:hover {
-        background: #22a3df;
-        transition: 0.3s;
-        color: #fff;
-      }
-
-      .get-button {
-        background-color: #47b2e4;
-        color: #fff;
-        display: inline-block;
-        padding: 13px 36px;
-        border-radius: 50px;
-        transition: none;
-        font-size: 1.6rem;
-        font-weight: 500;
-        font-family: "Jost", sans-serif;
-        margin-top: 40px;
-      }
-
-      .price-button:hover,
-      .price-button.active {
-        background: #47b2e4;
-        color: #fff;
-      }
-
-      .content-title {
-        color: #cccccc;
-      }
-
-      .section-3 {
-        display: flex;
-        justify-content: center;
-
-        margin-top: 20px;
-      }
-
-      .fixed-buttom-box {
-        display: flex;
-        justify-content: flex-end;
-        position: fixed;
-        bottom: 10px; /* Adjust the distance from the bottom as needed */
-        right: 20px;
-      }
-
-      .fixed-buttom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #47b2e4;
-
-        width: 40px;
-        height: 40px;
-
-        border-radius: 100px;
-      }
-
-      .fixed-buttom img {
-        width: 12px;
-        height: 12px;
-      }
-
-      .sns li:hover img {
-        filter: brightness(0) invert(1);
-      }
-
-      .sns li img {
-        filter: invert(0);
-        transition: filter 0.3s ease-in-out;
-      }
+    
     </style>
   </head>
 
@@ -401,14 +22,10 @@
               <div class="section-bottom"></div>
               <div class="section-bottoms"></div>
             </div>
-
-            <p>
+            <p class="para_font">
               Magnam dolores commodi suscipit. Necessitatibus eius consequatur
               ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui
-            </p>
-            <p>
-              impedit suscipit alias ea. Quia fugiat sit in iste officiis
+              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis
               commodi quidem hic quas.
             </p>
           </div>
@@ -429,23 +46,24 @@
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-          <!-- <div class="section-imgs">
-            <div class="section-img">
+          <!-- 전체적으로 손좀 보고, 여기는 새로 작업함(용화) -->
+          <div id="portfolio-imgs">
+            <div class="portfolio-img-column">
               <img src="./img/portfolio-1.jpg" />
               <img src="/img/portfolio-6.jpg" />
             </div>
-            <div class="section-img">
+            <div class="portfolio-img-column">
               <img src="/img/portfolio-2.jpg" />
               <img src="/img/portfolio-5.jpg" />
               <img src="/img/portfolio-9.jpg" />
             </div>
-            <div class="section-img">
+            <div class="portfolio-img-column">
               <img src="./img//portfolio-3.jpg" />
               <img src="/img//portfolio-4.jpg" />
               <img src="/img/portfolio-7.jpg" />
               <img src="/img/portfolio-8.jpg" />
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
@@ -458,14 +76,10 @@
               <div class="section-bottom"></div>
               <div class="section-bottoms"></div>
             </div>
-
-            <p>
+            <p class="para_font">
               Magnam dolores commodi suscipit. Necessitatibus eius consequatur
               ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui
-            </p>
-            <p>
-              impedit suscipit alias ea. Quia fugiat sit in iste officiis
+              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis
               commodi quidem hic quas.
             </p>
           </div>
@@ -486,10 +100,10 @@
 
                   <div class="sns">
                     <ul>
-                      <li><img src="img/twitter.png" /></li>
-                      <li><img src="img/facebook.png" /></li>
-                      <li><img src="img/instagram.png" /></li>
-                      <li><img src="img/linkedin.png" /></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M22.213 5.656a8.384 8.384 0 0 1-2.402.658A4.195 4.195 0 0 0 21.649 4c-.82.488-1.719.83-2.655 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.621-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.739 2.731 1.86 3.481a4.169 4.169 0 0 1-1.894-.523v.051a4.185 4.185 0 0 0 3.355 4.102a4.205 4.205 0 0 1-1.89.072A4.185 4.185 0 0 0 8.02 16.65a8.394 8.394 0 0 1-6.192 1.732a11.831 11.831 0 0 0 6.41 1.88c7.694 0 11.9-6.373 11.9-11.9c0-.18-.004-.362-.012-.541a8.497 8.497 0 0 0 2.086-2.164"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1024"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7M911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165M512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1m213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9"/></svg></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1024"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32M349.3 793.7H230.6V411.9h118.7zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8m503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2c-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7c120.2 0 142.3 79.1 142.3 181.9z"/></svg></li>
                     </ul>
                   </div>
                 </div>
@@ -508,10 +122,10 @@
                   </div>
                   <div class="sns">
                     <ul>
-                      <li><img src="img/twitter.png" /></li>
-                      <li><img src="img/facebook.png" /></li>
-                      <li><img src="img/instagram.png" /></li>
-                      <li><img src="img/linkedin.png" /></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M22.213 5.656a8.384 8.384 0 0 1-2.402.658A4.195 4.195 0 0 0 21.649 4c-.82.488-1.719.83-2.655 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.621-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.739 2.731 1.86 3.481a4.169 4.169 0 0 1-1.894-.523v.051a4.185 4.185 0 0 0 3.355 4.102a4.205 4.205 0 0 1-1.89.072A4.185 4.185 0 0 0 8.02 16.65a8.394 8.394 0 0 1-6.192 1.732a11.831 11.831 0 0 0 6.41 1.88c7.694 0 11.9-6.373 11.9-11.9c0-.18-.004-.362-.012-.541a8.497 8.497 0 0 0 2.086-2.164"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1024"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7M911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165M512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1m213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1024"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32M349.3 793.7H230.6V411.9h118.7zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8m503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2c-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7c120.2 0 142.3 79.1 142.3 181.9z"/></svg></li>
                     </ul>
                   </div>
                 </div>
@@ -533,10 +147,10 @@
 
                   <div class="sns">
                     <ul>
-                      <li><img src="img/twitter.png" /></li>
-                      <li><img src="img/facebook.png" /></li>
-                      <li><img src="img/instagram.png" /></li>
-                      <li><img src="img/linkedin.png" /></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M22.213 5.656a8.384 8.384 0 0 1-2.402.658A4.195 4.195 0 0 0 21.649 4c-.82.488-1.719.83-2.655 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.621-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.739 2.731 1.86 3.481a4.169 4.169 0 0 1-1.894-.523v.051a4.185 4.185 0 0 0 3.355 4.102a4.205 4.205 0 0 1-1.89.072A4.185 4.185 0 0 0 8.02 16.65a8.394 8.394 0 0 1-6.192 1.732a11.831 11.831 0 0 0 6.41 1.88c7.694 0 11.9-6.373 11.9-11.9c0-.18-.004-.362-.012-.541a8.497 8.497 0 0 0 2.086-2.164"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1024"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7M911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165M512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1m213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1024"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32M349.3 793.7H230.6V411.9h118.7zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8m503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2c-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7c120.2 0 142.3 79.1 142.3 181.9z"/></svg></li>
                     </ul>
                   </div>
                 </div>
@@ -555,10 +169,10 @@
                   </div>
                   <div class="sns">
                     <ul>
-                      <li><img src="img/twitter.png" /></li>
-                      <li><img src="img/facebook.png" /></li>
-                      <li><img src="img/instagram.png" /></li>
-                      <li><img src="img/linkedin.png" /></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M22.213 5.656a8.384 8.384 0 0 1-2.402.658A4.195 4.195 0 0 0 21.649 4c-.82.488-1.719.83-2.655 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.621-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.739 2.731 1.86 3.481a4.169 4.169 0 0 1-1.894-.523v.051a4.185 4.185 0 0 0 3.355 4.102a4.205 4.205 0 0 1-1.89.072A4.185 4.185 0 0 0 8.02 16.65a8.394 8.394 0 0 1-6.192 1.732a11.831 11.831 0 0 0 6.41 1.88c7.694 0 11.9-6.373 11.9-11.9c0-.18-.004-.362-.012-.541a8.497 8.497 0 0 0 2.086-2.164"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1024"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7M911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165M512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1m213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9"/></svg></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1024"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32M349.3 793.7H230.6V411.9h118.7zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8m503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2c-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7c120.2 0 142.3 79.1 142.3 181.9z"/></svg></li>
                     </ul>
                   </div>
                 </div>
@@ -577,21 +191,17 @@
               <div class="section-bottom"></div>
               <div class="section-bottoms"></div>
             </div>
-
-            <p>
+            <p class="para_font">
               Magnam dolores commodi suscipit. Necessitatibus eius consequatur
               ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui
-            </p>
-            <p>
-              impedit suscipit alias ea. Quia fugiat sit in iste officiis
-              commodi quidem hic quas.
+              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. 
+              Quia fugiat sit in iste officiis commodi quidem hic quas.
             </p>
           </div>
           <div class="section-3">
             <div class="price-card">
               <div class="price-list">
-                <div class="name">Free Plan</div>
+                <div class="price-name">Free Plan</div>
                 <div class="price">
                   <div class="price1">$</div>
                   <div class="price2">0</div>
@@ -628,7 +238,7 @@
             </div>
             <div class="price-card" style="border-top: 4px solid #47b2e4">
               <div class="price-list">
-                <div class="name">Business Plan</div>
+                <div class="price-name">Business Plan</div>
                 <div class="price">
                   <div class="price1">$</div>
                   <div class="price2">29</div>
@@ -661,7 +271,7 @@
             </div>
             <div class="price-card">
               <div class="price-list">
-                <div class="name">Developer Plan</div>
+                <div class="price-name">Developer Plan</div>
                 <div class="price">
                   <div class="price1">$</div>
                   <div class="price2">49</div>
