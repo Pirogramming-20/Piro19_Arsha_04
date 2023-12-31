@@ -11,46 +11,6 @@
     <link rel="stylesheet" href="./styles/aboutus.css"/>
     <title>Arsha</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-        :root {
-            --bs-gutter-x: 24px;
-            --bs-gutter-y: 0;
-            --bs-body-font-size: 1.6rem;
-            --bs-body-font-weight: 400;
-            --bs-body-line-height: 1.5;
-        }
-        .jost_font {
-            font-family: 'Jost', sans-serif;
-        }
-        .poppins_font {
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            font-family: "Open Sans", sans-serif;
-            color: #444444;
-        }
-        #center-outline {
-            display: flex;
-            flex-direction: column;
-        }
-        section {
-            padding: 60px 0;
-            overflow: hidden;
-        }
-        .container {
-            width: 100%;
-            padding-right: calc(var(--bs-gutter-x) * .5);
-            padding-left: calc(var(--bs-gutter-x) * .5);
-            margin-right: auto;
-            margin-left: auto;
-        }
-        @media (min-width: 1400px) {
-            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-            max-width: 1320px;
-            }
-        }
         /* 1 큰 박스 = section */
         /* 1 내부 박스(큰 박스의 자식) = container */
         /* section은 시맨틱 태그, 컨테이너는 클래스 부여 */
@@ -61,16 +21,19 @@
         <div id="header-top">
             <!-- 각자 margin처리 -->
             <div><img id="header-logo" src="./images/logo.png" alt=""></div>
-            <div>
+            <div id="current-device">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M4 16h16V5H4v11zm9 2v2h4v2H7v-2h4v-2H2.992A.998.998 0 0 1 2 16.993V4.007C2 3.451 2.455 3 2.992 3h18.016c.548 0 .992.449.992 1.007v12.986c0 .556-.455 1.007-.992 1.007H13z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M6 4v16h12V4H6zM5 2h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm7 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M7 4v16h10V4H7zM6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
             </div>
-            <!-- pseudo element로 양쪽 버튼 -->
-            <div id="header-top-center">Arsha</div>
+            <div id="header-top-center" class="default_font">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/></svg>
+                <span>Arsha</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+            </div>
             <div id="header-top-left">
-                <div>Hide demo 버튼</div>
-                <div>FreedownLoad</div>
+                <div id="external-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/></svg></div>
+                <div id="header-download" class="default_font"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M13 10h5l-6 6-6-6h5V3h2v7zm-9 9h16v-7h2v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8h2v7z"/></svg>FREE DOWNLOAD</div>
             </div>
         </div>
     </header>
@@ -89,9 +52,18 @@
                     </a>
                     <div id="header-dropdown-menu">
                         <span>Espresso</span>
-                        <span>Dolce</span>
+                        <div id="header-inner-dropdown-menu">
+                            <span>Latte</span>
+                            <div id="header-dropdown-latte">
+                                <span>Caffe Latte</span>
+                                <span>Latte Macchiato</span>
+                                <span>GreenTea Latte</span>
+                                <span>Mocha Latte</span>
+                                <span>Vanilla Latte</span>
+                            </div>
+                        </div>
                         <span>Americano</span>
-                        <span>Latte</span>
+                        <span>Dolce</span>
                         <span>Cappuccino</span>
                     </div>
                 </div>
