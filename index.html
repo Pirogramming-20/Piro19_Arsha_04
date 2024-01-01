@@ -11,6 +11,11 @@
             --bs-gutter-x: 24px;
             --bs-gutter-y: 0;
             --bs-body-line-height: 1.5;
+            --bs-body-font-size: 16px;
+            --bs-body-font-weight: 400;
+            --bs-body-color: #212529;
+            --bs-body-color-rgb: 33,37,41;
+            --bs-body-bg: #fff;
         }
         body {
             font-family: "Open Sans", sans-serif;
@@ -23,7 +28,6 @@
             font-weight: var(--bs-body-font-weight);
             line-height: var(--bs-body-line-height);
             color: var(--bs-body-color);
-            text-align: var(--bs-body-text-align);
             background-color: var(--bs-body-bg);
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: transparent;
@@ -76,6 +80,7 @@
             color: #37517e;
             font-family: "Jost", sans-serif;
             margin-top: 0;
+            line-height: 1.2;
         }
 
         .section-title h2::before{
@@ -125,6 +130,17 @@
             margin-left: auto; 
         }
 
+        .col-md-6 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+
+        .col-lg-3 {
+            flex: 0 0 auto;
+            width: 25%;
+        }
+
+
 
         #faq .faq-list {
             padding: 0 100px;
@@ -144,9 +160,12 @@
         #faq .faq-list li {
             padding: 20px;
             background: #fff;
-            height: 64px;
             border-radius: 4px;
             position: relative;
+        }
+
+        #faq .faq-list li:hover > a {
+            color: #47b2e4;
         }
 
         #faq .faq-list .icon-help {
@@ -156,6 +175,7 @@
             left: 20px;
             height: 24px;
             color: #47b2e4;
+            line-height: 1;
         }
         #faq .faq-list a {
             color: #37517e;
@@ -170,6 +190,7 @@
             outline: none;
             cursor: pointer;
         }
+
 
         #faq .faq-list a.collapsed:hover {
             color: #47b2e4;
@@ -191,7 +212,7 @@
         .faq-list .icon-show{
             content: "\ea4a";
         }
-
+        
         .contact-row{
             display: flex;
             margin: 0 -12px;
@@ -468,15 +489,6 @@
 
 
 
-        .col-md-6 {
-            flex: 0 0 auto;
-            width: 50%;
-        }
-
-        .col-lg-3 {
-            flex: 0 0 auto;
-            width: 25%;
-        }
 
         .footer-top{
             padding: 60px 0 30px 0;
@@ -642,11 +654,16 @@
 
         .toggle-div.visible {
             display: flex;
+
+            
         }
 
         .toggle-div.visible p{
             margin-bottom: 0;
-            padding: 10px 0 0 10px;
+            padding: 10px 0 0 0;
+            margin-top: 0;
+            font-family: "Open Sans", sans-serif;
+            font-size: var(--bs-body-font-size);
         }
 
         .form-control:focus{
