@@ -179,7 +179,7 @@ header {
 
 #header-dropdown-menu > * , #header-dropdown-latte > * {
     padding-top: 13px;
-    padding-bottom: 13px;
+    padding-bottom: 6px;
     padding-right: 100%;
     padding-left: 25px;
     color: #0c3c53;
