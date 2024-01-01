@@ -1,6 +1,7 @@
 #portfolio-container {
     width: 1320px;
     height: 1267px;
+    margin: 0 -12px;
 }
 
 #portfolio-imgs {
