@@ -4,7 +4,7 @@
 }
 #statistics-main {
     display: flex; 
-    align-items: center;
+    align-items: center;    
 }
 #statistics-left, #statistics-right {
     flex-basis: 50%;
