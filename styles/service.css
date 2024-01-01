@@ -1,3 +1,8 @@
+#service-area {
+    margin-right: auto;
+    margin-left: auto;
+    
+}
 #service-back {
     background-color: #f3f5fa
 }
@@ -5,13 +10,14 @@
     margin-bottom: 20px;
 }
 #service-title {
-    font-size: 32px;
+    font-size: 32px; 
     font-weight: bold;
     text-align: center;
     padding-bottom: 20px;
     margin-bottom: 20px;
     position: relative;
     font-family: 'Jost', sans-serif;
+    color: #37517e;
 }
 #service-title::before {
     content: "";
@@ -38,11 +44,13 @@
     text-align: center;
     padding-bottom: 30px;
     font-size: 16px;
+    margin: 0 !important;
 }
 #service-fourbox {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;        
+    justify-content: space-around;
+    align-items: stretch;      
 }
 .service-box {
     box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
@@ -52,18 +60,23 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: 100%;
+    
 }
+
 .service-box-title {
     font-family: "Jost", sans-serif;
     font-size: 24px;
     color:#37517e;
     margin-bottom: 15px;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
+    letter-spacing: 1px;
 }
 .service-icon {
     margin-bottom: 10px;
-    font-size: 36px;
+    width: 36px;
+    height: 36px;
     color:#47b2e4;
 }
 #service-icon1 {
@@ -109,4 +122,9 @@
     color: #47b2e4;
     font-size: 36px;
 }
-
+#service-gap1{
+    padding-left: 0;
+}
+#service-gap4{
+    padding-right: 0;
+}

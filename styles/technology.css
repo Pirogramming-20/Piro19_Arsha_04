@@ -14,9 +14,11 @@
     margin-bottom: 16px;
     font-size: 15px;
     color:#848484;
+    line-height: normal;
 }
 #technology-top {
     padding: 60px 100px 0 100px;
+    line-height: 40px;
 }
 #technology-t1 {
     color: #37517e;

@@ -10,11 +10,14 @@
     flex-basis: 50%;
     flex-grow: 1;
     flex-shrink: 1; 
-    padding: 0 12px;
 }
 
 #statistics-left {
-    overflow: hidden; 
+    overflow: hidden;
+    padding-right: 12px;
+}
+#statistics-right {
+    padding-left: 12px;
 }
 
 #statistics-left img {
@@ -25,10 +28,11 @@
 }
 #statistics-title {
     color: #37517e;
-    font-size: 37px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 8px;
     font-family: 'Poppins', sans-serif;
+    line-height: 40px;    
 }
 #statistics-comment {
     margin-bottom: 16px;

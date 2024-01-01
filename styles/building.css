@@ -7,6 +7,8 @@
 }
 #building-main {
     display: flex;
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
 }
 #building-left {
     width: 75%;
@@ -44,6 +46,7 @@
     border-radius: 50px;
     transition: 0.5s; 
     font-family: 'Jost', sans-serif;
+    letter-spacing: 1px;
 }
 #building-button:hover {
     background-color: #47b2e4;
