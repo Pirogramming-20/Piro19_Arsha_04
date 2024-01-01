@@ -71,7 +71,7 @@
     margin-bottom: 15px;
     font-weight: 500;
     cursor: pointer;
-    letter-spacing: 1px;
+    
 }
 .service-icon {
     margin-bottom: 10px;
@@ -116,6 +116,7 @@
     margin-bottom: 0;
 }
 .service-gap {
+    flex: 1;
     padding: 0 12px;
 }
 .service-icon{
