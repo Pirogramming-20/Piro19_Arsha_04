@@ -7,7 +7,7 @@
         justify-content: flex-end;
         text-align: center;
         align-items: center;
-        margin-bottom: 100px;
+        margin-bottom: -200px;
         height: 100vh;
     }
     #introduction-buttonbox {
@@ -15,7 +15,7 @@
         justify-content: center;
     }
     #introduction-box {
-        height: 100vh;
+        height: 90vh;
     }
     #introduction-innerbox > div:nth-of-type(2) {
         display: flex;
