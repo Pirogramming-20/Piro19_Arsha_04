@@ -90,6 +90,9 @@
     cursor: pointer;
 }
 #intro-image {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
     pointer-events: none;
     animation: intro-image 4s ease-in-out infinite;
 }

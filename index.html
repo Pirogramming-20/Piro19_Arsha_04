@@ -317,13 +317,63 @@
             line-height: 1.2;
             color: #37517e;
         }
+
+        @media screen and (max-width: 990px) {
+            .container {
+                display: flex;
+                max-width: 720px;
+            }
+            #introduction-innerbox {
+                flex-direction: column-reverse;
+                justify-content: flex-end;
+                text-align: center;
+                align-items: center;
+                margin-bottom: 100px;
+            }
+            #introduction-buttonbox {
+                display: flex;
+                justify-content: center;
+            }
+            #introduction-box {
+                height: 100vh;
+            }
+            #introduction-innerbox > div:nth-of-type(2) {
+                display: flex;
+                justify-content: center;
+                width: 348px;
+                margin-bottom: 20px;
+            }
+            #intro-image {
+                animation-name: none;
+            }
+            #header-menubox, #current-device {
+                opacity: 0;
+                width: 0;
+                pointer-events: none;
+            }
+            #header-logo {
+                margin-top: 5px;
+            }
+            #header-hamburgerBt > div {
+                width: 20px;
+                height: 1.5px;
+                background-color: white;
+                border-radius: 1px;
+            }
+            #header-hamburgerBt {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 15px;
+                cursor: pointer;
+            }
+        }
         
         /* 1 큰 박스 = section */
         /* 1 내부 박스(큰 박스의 자식) = container */
         /* section은 시맨틱 태그, 컨테이너는 클래스 부여 */
     </style>
 </head>
-
 <body id="center-outline">
     <header>
         <div id="header-top">
@@ -346,7 +396,7 @@
         </div>
     </header>
     <div id="header-menu">
-        <div id="header-menu-innerbox">
+        <div id="header-menu-innerbox" class="container">
             <a href="" id="header-menu-logo" class="jost_font">ARSHA</a>
             <div id="header-menubox">
                 <a href="">Home</a>
@@ -377,6 +427,11 @@
                 </div>
                 <a href="">Contact</a>
                 <button>Get Started</button>
+            </div>
+            <div id="header-hamburgerBt">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </div>
