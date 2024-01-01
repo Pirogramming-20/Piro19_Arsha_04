@@ -1,0 +1,111 @@
+#service-back {
+    background-color: #f3f5fa
+}
+.service-line {
+    margin-bottom: 20px;
+}
+#service-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: 'Jost', sans-serif;
+}
+#service-title::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+#service-title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px);
+    font-family: "Jost", sans-serif;
+}
+#service-comment {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 16px;
+}
+#service-fourbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+}
+.service-box {
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.4s;
+    background: #fff;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.service-box-title {
+    font-family: "Jost", sans-serif;
+    font-size: 24px;
+    color:#37517e;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.service-icon {
+    margin-bottom: 10px;
+    font-size: 36px;
+    color:#47b2e4;
+}
+#service-icon1 {
+    width: 36px;
+    height: 36px;
+    background: url('https://api.iconify.design/solar/basketball-outline.svg?color=%2347b2e4') no-repeat center center / contain;
+    background-size: contain;
+}
+#service-icon2 {
+    width: 36px;
+    height: 36px;
+    background: url('https://api.iconify.design/ep/document.svg?color=%2347b2e4') no-repeat center center / contain;
+    background-size: contain;
+}
+#service-icon3 {
+    width: 36px;
+    height: 36px;
+    background: url('https://api.iconify.design/ri/timer-2-line.svg?color=%2347b2e4') no-repeat center center / contain;
+    background-size: contain;
+}
+#service-icon4 {
+    width: 36px;
+    height: 36px;
+    background: url('https://api.iconify.design/lucide/menu-square.svg?color=%2347b2e4') no-repeat center center / contain;
+    background-size: contain;
+}
+.service-box:hover {
+    .service-box-title {
+        color:#47b2e4;
+    }
+    transform: translateY(-5px);
+}
+
+.service-box-comment {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.service-gap {
+    padding: 0 12px;
+}
+.service-icon{
+    color: #47b2e4;
+    font-size: 36px;
+}
+

@@ -1,0 +1,116 @@
+#technology-back {
+    
+}
+.container-f {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+
+}
+
+#technology-back {
+    background-color: #f3f5fa
+}
+.technology-main {
+    display: flex;
+}
+#technology-comment {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color:#848484;
+}
+#technology-top {
+    padding: 60px 100px 0 100px;
+}
+#technology-t1 {
+    color: #37517e;
+    font-family: 'Jost', sans-serif;
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+#technology-t2 {
+    color: #37517e;
+    font-weight: bolder;
+    font-family: 'Jost', sans-serif;
+    font-size: 34px;
+    margin-bottom: 16px;
+}
+#technology-bottom {
+    padding: 0 100px 60px 100px;
+}
+#technology-img {
+    background-image: url(https://bootstrapmade.com/demo/templates/Arsha/assets/img/why-us.png);
+    flex: 5;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding: 0 12px;
+}
+#technology-left {
+    flex:7;
+    padding: 0 12px;
+}
+.technology-3box {
+    padding-bottom: 16px;
+}
+.technology-box {
+    padding: 20px;
+    background: #fff;
+    position: relative;
+}
+.techbox-t {
+    display: block;
+    font-size: 16px;
+    font-weight: 500; 
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    width: 100%; 
+    padding-right: 30px;
+    line-height: 24px;
+}
+.techbox-num {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+#technology-back #technology-3box li+li {
+    margin-top: 15px;
+}
+.techbox-num {
+    color: #47b2e4
+}
+.techbox-icon {
+    display: inline-block;
+    position: absolute;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    top: 20px;
+    right: 30px;
+}
+
+.techbox-behind {
+    margin-top: 10px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    width: 100%;
+}
+.techbox-t:hover {
+    color:#47b2e4;
+
+}
+.technology-box:hover #technology-img {
+    transform: translateY(2px);
+}
+.techbox-behind {
+    display: none;
+}
+.techbox-t:focus + .techbox-behind,
+.techbox-t:active + .techbox-behind {
+    display: block;
+}

@@ -1,0 +1,51 @@
+#building-back {
+    padding: 120px 0;    
+    background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), 
+    url(https://bootstrapmade.com/demo/templates/Arsha/assets/img/cta-bg.jpg) 
+    fixed center center;
+    background-size: cover;
+}
+#building-main {
+    display: flex;
+}
+#building-left {
+    width: 75%;
+    padding: 0 12px;
+}
+#building-right {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 12px;
+}
+#building-left-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-family: 'Jost', sans-serif;
+}
+#building-left-comment {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    text-align: left;    
+}
+#building-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    transition: 0.5s; 
+    font-family: 'Jost', sans-serif;
+}
+#building-button:hover {
+    background-color: #47b2e4;
+    border: 2px solid #47b2e4;
+}
