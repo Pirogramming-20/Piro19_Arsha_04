@@ -1,48 +1,60 @@
-.section-list {
-    text-align: center;
-    padding-bottom: 30px;
+
+
+@media screen and (max-width: 991px) {
+    #introduction-innerbox {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        text-align: center;
+        align-items: center;
+        margin-bottom: -200px;
+        height: 100vh;
+    }
+    #introduction-buttonbox {
+        display: flex;
+        justify-content: center;
+    }
+    #introduction-box {
+        height: 90vh;
+    }
+    #introduction-innerbox > div:nth-of-type(2) {
+        display: flex;
+        justify-content: center;
+        width: 348px;
+        margin-bottom: 20px;
+    }
+    #intro-image {
+        animation-name: none;
+    }
+    #header-menubox, #current-device {
+        opacity: 0;
+        width: 0;
+        pointer-events: none;
+    }
+    #header-logo {
+        margin-top: 5px;
+    }
+    #header-hamburgerBt > div {
+        width: 20px;
+        height: 1.5px;
+        background-color: white;
+        border-radius: 1px;
+    }
+    #header-hamburgerBt {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 15px;
+        cursor: pointer;
+    }
 }
 
-.section-title {
-    font-family: 'Jost', sans-serif;
-    font-size: 3.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    position: relative;
-    color: #37517e;
-}
-
-.seciont-bottom-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 24px;
-}
-
-.section-bottom {
-    width: 120px;
-    height: 1px;
-    background: #ddd;
-    border: 1px solid #ddd;
-    position: relative;
-}
-
-.section-bottoms {
-    position: absolute;
-    width: 40px;
-    height: 3px;
-    background: #47b2e4;
-    border: 1px solid #47b2e4;
-}
 
 .section-list li {
     cursor: pointer;
     display: inline-block;
     margin: 10px 5px;
-    font-size: 1.5rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1;
     color: #444444;
@@ -57,10 +69,16 @@
     background: #47b2e4;
     color: #fff;
 }
+.section-button ul{
+    display: flex;
+    margin-bottom: 0;
+}
 
 .section-button {
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    padding-left: 32px;
 }
 
 .section-2 {
@@ -93,7 +111,7 @@
 .name {
     font-family: 'Jost', sans-serif;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 2rem;
     color: #37517e;
 }
@@ -109,12 +127,12 @@
 
 .info {
     font-size: 1.4rem;
-    margin-top: 15px;
+    margin-top: 10px;
     line-height: 19px;
 }
 
 .sns {
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -127,10 +145,11 @@
 }
 
 .team-card1 {
-    display: flex;
-    justify-content: center;
 
-    gap: 30px;
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .sns li {
@@ -188,8 +207,7 @@
 }
 
 .price-list {
-    padding-top: 60px;
-    padding-left: 40px;
+    padding: 60px 40px;
 }
 
 .price {
@@ -200,7 +218,6 @@
     font-family: "Jost", sans-serif;
 
     margin-top: 20px;
-    margin-bottom: 10px;
 }
 
 .price1 {
@@ -279,8 +296,8 @@
 .section-3 {
     display: flex;
     justify-content: center;
-
-    margin-top: 20px;
+    padding-left: 12px;
+    padding-top: 40px;
 }
 
 .fixed-buttom-box {
@@ -328,3 +345,4 @@
     line-height: 1.2;
     color: #37517e;
 }
+
