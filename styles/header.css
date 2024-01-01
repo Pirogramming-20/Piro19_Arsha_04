@@ -16,6 +16,9 @@ header {
     color: white;
 }
 
+#header-top:first-child{
+    display: flex;
+}
 #current-device {
     display: flex;
     justify-content: space-between;

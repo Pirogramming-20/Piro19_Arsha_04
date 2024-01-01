@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css"/>
     <link rel="stylesheet" href="./styles/global.css"/>
-
-    
-    <!-- <link rel="stylesheet" href="./styles/Team&Pricing.css" /> -->
+    <link rel="stylesheet" href="./styles/Team&Pricing.css" />
     <link rel="stylesheet" href="./styles/portfolio.css" />
     <link rel="stylesheet" href="./styles/service.css">
     <link rel="stylesheet" href="./styles/statistics.css">
@@ -20,308 +18,6 @@
     <link rel="stylesheet" href="./styles/footer.css"/>
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
     <title>Arsha</title>
-    <style>
-        .section-list li {
-            cursor: pointer;
-            display: inline-block;
-            margin: 10px 5px;
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 1;
-            color: #444444;
-            transition: all 0.3s;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-family: "Poppins", sans-serif;
-        }
-        
-        .section-list li:hover,
-        .section-list li.active {
-            background: #47b2e4;
-            color: #fff;
-        }
-        .section-button ul{
-            display: flex;
-            margin-bottom: 0;
-        }
-
-        .section-button {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            padding-left: 32px;
-        }
-
-        .section-2 {
-            background-color: #f3f5fa;
-        }
-        
-        .team_card {
-            display: flex;
-            align-items: center;
-            width: 636px;
-            height: 233.83px;
-        
-            background-color: #ffffff;
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        
-            margin-bottom: 25px;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .member {
-            width: 173.83px;
-        
-            border-radius: 100px;
-        
-            margin-left: 30px;
-            margin-right: 30px;
-        }
-        
-        .name {
-            font-family: 'Jost', sans-serif;
-            font-weight: 700;
-            margin-bottom: 15px;
-            font-size: 2rem;
-            color: #37517e;
-        }
-        
-        .job {
-            display: block;
-            font-size: 1.5rem;
-            padding-bottom: 10px;
-            position: relative;
-            font-weight: 400;
-            color: #444444;
-        }
-        
-        .info {
-            font-size: 1.4rem;
-            margin-top: 15px;
-            line-height: 19px;
-        }
-        
-        .sns {
-            margin-top: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-        
-        .bottom {
-            width: 50px;
-            height: 1px;
-            background-color: #cbd6e9;
-        }
-        
-        .team-card1 {
-            display: flex;
-            justify-content: center;
-        
-            gap: 30px;
-        }
-        
-        .sns li {
-            cursor: pointer;
-            display: inline-block;
-            /* margin: 10px 5px; */
-            color: #444444;
-            transition: all 0.3s;
-            padding: 8px 8px 8px 8px;
-            width: 32px;
-            height: 32px;
-            border-radius: 50px;
-            font-family: "Poppins", sans-serif;
-            background-color: #eff2f8;
-            margin-right: 6px;
-        }
-        
-        .sns li svg {
-            fill: #37517e;
-        }
-        
-        .sns img {
-            display: flex;
-            justify-content: center;
-            width: 15px;
-        }
-        
-        .sns li:hover,
-        .sns li.active {
-            background: #47b2e4;
-            color: #fff;
-        }
-        
-        .sns li:hover > svg {
-            fill: white;
-        }
-        
-        .team_card:hover {
-            transform: translateY(-10px);
-            transition: transform 0.4s ease-in-out;
-        }
-        
-        .team_card:not(:hover) {
-            transform: translateY(0);
-        }
-        
-        .price-card {
-            box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
-            width: 416px;
-            height: 573.19px;
-        
-            margin-right: 25px;
-        
-            border-radius: 5px;
-        }
-        
-        .price-list {
-            padding-top: 60px;
-            padding-left: 40px;
-        }
-        
-        .price {
-            display: flex;
-            font-size: 4.8rem;
-            color: #37517e;
-            font-weight: 400;
-            font-family: "Jost", sans-serif;
-        
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .price1 {
-            font-size: 2.8rem;
-        }
-        
-        .per {
-            color: #47b2e4;
-            font-size: 1.8rem;
-            font-family: "Jost", sans-serif;
-        }
-        
-        .content-box {
-            margin-top: 50px;
-        }
-        
-        .content {
-            display: flex;
-            font-size: 1.6rem;
-            color: #999999;
-        }
-        
-        .content img {
-            width: 14px;
-            height: 14px;
-        
-            margin-right: 12px;
-            margin-bottom: 20px;
-        }
-        
-        .price-button {
-            display: inline-block;
-            padding: 12px 35px;
-            border-radius: 50px;
-            color: #47b2e4;
-            transition: none;
-            font-size: 1.6rem;
-            font-weight: 500;
-            font-family: "Jost", sans-serif;
-            transition: 0.3s;
-            border: 1px solid #47b2e4;
-        
-            margin-top: 40px;
-        }
-        
-        .get-button:hover {
-            background: #22a3df;
-            transition: 0.3s;
-            color: #fff;
-        }
-        
-        .get-button {
-            background-color: #47b2e4;
-            color: #fff;
-            display: inline-block;
-            padding: 13px 36px;
-            border-radius: 50px;
-            transition: none;
-            font-size: 1.6rem;
-            font-weight: 500;
-            font-family: "Jost", sans-serif;
-            margin-top: 40px;
-        }
-        
-        .price-button:hover,
-        .price-button.active {
-            background: #47b2e4;
-            color: #fff;
-        }
-        
-        .content-title {
-            text-decoration: line-through;
-            color: #cccccc;
-        }
-        
-        .section-3 {
-            display: flex;
-            justify-content: center;
-        
-            margin-top: 20px;
-        }
-        
-        .fixed-buttom-box {
-            display: flex;
-            justify-content: flex-end;
-            position: fixed;
-            bottom: 10px;
-            right: 20px;
-        }
-        
-        .fixed-buttom {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #47b2e4;
-        
-            width: 40px;
-            height: 40px;
-        
-            border-radius: 100px;
-        }
-        
-        .fixed-buttom img {
-            width: 12px;
-            height: 12px;
-        }
-        
-        .sns li:hover img {
-            filter: brightness(0) invert(1);
-        }
-        
-        .sns li img {
-            filter: invert(0);
-            transition: filter 0.3s ease-in-out;
-        }
-        .para_font {
-            font-family: "Open Sans", sans-serif;
-            font-size: 1.6rem;
-            line-height: 24px;
-        }
-        .price-name {
-            font-family: 'Jost', sans-serif;
-            font-size: 2rem;
-            font-weight: 500;
-            line-height: 1.2;
-            color: #37517e;
-        }
-        
-        /* 1 큰 박스 = section */
-        /* 1 내부 박스(큰 박스의 자식) = container */
-        /* section은 시맨틱 태그, 컨테이너는 클래스 부여 */
-    </style>
 </head>
 
 <body id="center-outline">
@@ -401,12 +97,12 @@
     <section id="companies-background">
         <div id="companies" class="container">
             <div id="companies-grid">
-                <div><img src="./images/client-1.png" alt=""></div>
-                <div><img src="./images/client-2.png" alt=""></div>
-                <div><img src="./images/client-3.png" alt=""></div>
-                <div><img src="./images/client-4.png" alt=""></div>
-                <div><img src="./images/client-5.png" alt=""></div>
-                <div><img src="./images/client-6.png" alt=""></div>
+                <div class="flex-grid"><img src="./images/client-1.png" alt=""></div>
+                <div class="flex-grid"><img src="./images/client-2.png" alt=""></div>
+                <div class="flex-grid"><img src="./images/client-3.png" alt=""></div>
+                <div class="flex-grid"><img src="./images/client-4.png" alt=""></div>
+                <div class="flex-grid"><img src="./images/client-5.png" alt=""></div>
+                <div class="flex-grid"><img src="./images/client-6.png" alt=""></div>
             </div>
         </div>
     </section>
@@ -591,7 +287,7 @@
         <div id="building-container" class="container">
             <div id="building-main">
                 <div id="building-left">
-                    <div id="building-left-title">Call to Action</div>
+                    <h3 id="building-left-title">Call To Action</h3>
                     <p id="building-left-comment">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div id="building-right">
@@ -809,12 +505,12 @@
                     <img src="img/team-3.jpg" class="member" />
                   </div>
                   <div>
-                    <div class="name">Walter White</div>
-                    <div class="job">Chief Executive Officer</div>
+                    <div class="name">William Anderson</div>
+                    <div class="job">CTO</div>
                     <div class="bottom"></div>
                     <div class="info">
-                      Explicabo voluptatem mollitia et repellat qui dolorum
-                      <br />quasi
+                        Quisquam facilis cum velit laborum corrupti 
+                      <br />fuga rerum quia
                     </div>
   
                     <div class="sns">
@@ -832,12 +528,12 @@
                     <img src="img/team-4.jpg" class="member" />
                   </div>
                   <div>
-                    <div class="name">Sarah Jhonson</div>
-                    <div class="job">Product Manager</div>
+                    <div class="name">Amanda Jepson</div>
+                    <div class="job">Accountant</div>
                     <div class="bottom"></div>
                     <div class="info">
-                      Aut maiores voluptates amet et quis praesentium qui
-                      <br />senda para
+                        Dolorum tempora officiis odit laborum officiis et
+                      <br />et accusamus
                     </div>
                     <div class="sns">
                       <ul>
@@ -854,7 +550,7 @@
           </div>
         </div>
       </section>
-      <section class="section-3">
+      <section>
         <div class="container">
           <div>
             <div class="section-title">
@@ -871,8 +567,8 @@
                 <div class="price-list">
                   <div class="price-name">Free Plan</div>
                   <div class="price">
-                    <div class="price1">$</div>
-                    <div class="price2">0</div>
+                    <sup class="price1">$</sup>
+                    <h4 class="price2">0</h4>
                   </div>
                   <span class="per">per month</span>
                   <div class="content-box">
@@ -908,8 +604,8 @@
                 <div class="price-list">
                   <div class="price-name">Business Plan</div>
                   <div class="price">
-                    <div class="price1">$</div>
-                    <div class="price2">29</div>
+                    <sup class="price1">$</sup>
+                    <h4 class="price2">29</h4>
                   </div>
                   <span class="per">per month</span>
                   <div class="content-box">
@@ -941,8 +637,8 @@
                 <div class="price-list">
                   <div class="price-name">Developer Plan</div>
                   <div class="price">
-                    <div class="price1">$</div>
-                    <div class="price2">49</div>
+                    <sup class="price1">$</sup>
+                    <h4 class="price2">49</h4>
                   </div>
                   <span class="per">per month</span>
                   <div class="content-box">
